@@ -1,0 +1,184 @@
+/* ---------- Global ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f6f8, #e9edf3);
+  color: #2c2c2c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ---------- Header ---------- */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+/* ---------- Layout ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* ---------- Author List ---------- */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.list-item:hover {
+  background: #f1f5f9;
+}
+
+.list-item strong {
+  color: #111827;
+}
+
+.list-item span {
+  font-weight: 600;
+  color: #16a34a;
+}
+
+/* ---------- Text ---------- */
+p {
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Inputs & Buttons ---------- */
+input {
+  width: 160px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  border-color: #2563eb;
+}
+
+button {
+  padding: 8px 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Errors ---------- */
+.error {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* ---------- Status Badge ---------- */
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: #fde68a;
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
